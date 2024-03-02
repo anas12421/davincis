@@ -1,6 +1,6 @@
 $(function () {
 
-  "use strick"
+  "use strict"
 
   $(".back2top i").on('click', function () {
     $('html,body').animate({
@@ -37,14 +37,11 @@ $(function () {
 
   // full body wow js
   new WOW().init();
-
-
-
+  
   // banner part slider js
-
   $('.banner_main_slider').slick({
-    fade:true,
-    arrows:false,
+    fade: true,
+    arrows: false,
     speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -64,51 +61,44 @@ $(function () {
     ]
   });
 
-
-
   // Client part slider js
+  $('.client_main_slider').slick({
+    arrows: false,
+    speed: 600,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    centerMode: true,
+    centerPadding: '0',
+    responsive: [{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
 
-  
-$('.client_main_slider').slick({
-  arrows:false,
-  speed: 600,
-  slidesToShow: 5,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 1500,
-  centerMode: true,
-  centerPadding: '0',
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          centerMode: false
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false
+        }
+      }
 
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-         centerMode: false
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-         centerMode: false
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-});
+    ]
+  });
 
 
 
