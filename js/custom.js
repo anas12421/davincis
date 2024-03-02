@@ -21,6 +21,12 @@ $(function () {
     } else {
       $(".main-navbar").removeClass("nav_ex")
     }
+
+    if (scrolling > 50) {
+      $("#responsive_nav").addClass("nav_ex")
+    } else {
+      $("#responsive_nav").removeClass("nav_ex")
+    }
   })
 
   // counter js
@@ -50,7 +56,6 @@ $(function () {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
         }
       }
       // You can unslick at a given breakpoint now by adding:
@@ -80,20 +85,23 @@ $('.client_main_slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
         infinite: true,
+
       }
     },
     {
       breakpoint: 600,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+         centerMode: false
       }
     },
     {
       breakpoint: 480,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+         centerMode: false
       }
     }
     // You can unslick at a given breakpoint now by adding:
