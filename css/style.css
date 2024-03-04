@@ -15,6 +15,8 @@
   13) breadcrumb css start
   14) Mission & vision css start
   15) Team css start
+  17) Blog css start
+  18) latest Blog css start
   */
 
 
@@ -42,6 +44,7 @@
   --serif: 'Roboto Serif', serif;
   --sans-serif: 'Montserrat', sans-serif;
   --raleway: 'Raleway', sans-serif;
+  --roboto: 'Roboto', sans-serif;
   --lato: 'Lato', sans-serif;
   --opensans: "Open Sans", sans-serif;
   --transition: all ease-in-out .5s;
@@ -573,8 +576,6 @@ body {
   color: var(--primary_color);
 }
 
-
-
 /* responsive navbar css start */
 .res_nav {
   background-color: white;
@@ -627,15 +628,6 @@ body {
 .show>.btn-primary.dropdown-toggle:focus {
   box-shadow: none;
 }
-
-/* .res_nav .offcanvas-body{
-  background-color: transparent !important;
-  backdrop-filter: blur(1px) !important;
-}
-.res_nav .offcanvas-header{
-  background-color: transparent !important;
-  backdrop-filter: blur(1px) !important;
-} */
 
 #responsive_nav .responsive-menu li {
   margin-top: 4px;
@@ -718,10 +710,7 @@ body {
 
 /* responsive navbar css end */
 
-
-
 /* Banner CSS Start */
-
 #banner {
   position: relative;
   z-index: -1;
@@ -735,7 +724,6 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
-
 
 .banner_content h1 {
   font-size: 45px;
@@ -809,8 +797,6 @@ body {
   height: 0;
 }
 
-
-
 /* Counter css start */
 #counter {
   margin-top: 50px;
@@ -821,8 +807,6 @@ body {
   text-align: center;
   border-right: 2px solid #dadfe1;
 }
-
-
 
 .counter_main span {
   font-size: 45px;
@@ -908,7 +892,6 @@ body {
 .service_content:hover h4 {
   color: #29abe2;
 }
-
 
 .service_content p {
   font-size: 15px;
@@ -1053,11 +1036,6 @@ footer {
   color: white;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-
-}
-
-.footer_service {
-  /* text-align: center; */
 }
 
 .footer_service h2 {
@@ -1118,8 +1096,6 @@ footer {
   height: 40px;
   width: 40px;
   line-height: 40px;
-  /*background-color: yellow;
-  */
   text-align: center;
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -1179,7 +1155,6 @@ footer {
 }
 
 /* login & register css start */
-
 #login {
   background-color: #6fa6de;
   height: 100vh;
@@ -1189,10 +1164,8 @@ footer {
   justify-content: center;
 }
 
-
 .login_img {
   height: 100%;
-  /* text-align: end; */
 }
 
 .login_img img {
@@ -1205,10 +1178,8 @@ footer {
 
 
 .login_form {
-
   height: 100%;
   width: 100%;
-  /* backdrop-filter: blur(5px); */
   padding: 50px 25px 30px 25px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -1253,7 +1224,6 @@ footer {
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
-
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -1388,13 +1358,13 @@ footer {
 .mission_header h2 {
   font-size: 40px;
   font-weight: 500;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--raleway);
 }
 
 .mission_text p {
   font-size: 20px;
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--roboto);
   line-height: 35px;
   text-align: justify;
 }
@@ -1539,4 +1509,242 @@ footer {
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   -o-transform: scale(1.2);
+}
+
+/* Contact css start */
+#contact {
+  padding-top: 50px;
+}
+
+.contact_header h3 {
+  font-size: 40px;
+  font-weight: 500;
+  font-family: var(--raleway);
+  margin-bottom: 30px;
+}
+
+.contact_main_form {
+  box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.75);
+  padding: 25px 0;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.form_input label {
+  font-family: var(--lato);
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.form_input input,
+.form_input textarea {
+  border: none;
+  border: 2px solid #f1f1f1;
+}
+
+.form_input input:focus,
+.form_input textarea:focus {
+  border-color: #29abe2 !important;
+}
+
+.form_btn button {
+  margin-top: 25px;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #29abe2;
+  font-size: 17px;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-family: var(--roboto);
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #29abe2;
+  position: relative;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.form_btn button:hover {
+  color: white;
+}
+
+.form_btn button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #29abe2;
+  content: '';
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.form_btn button:hover::after {
+  width: 50%;
+}
+
+.form_btn button::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0;
+  background-color: #29abe2;
+  content: '';
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.form_btn button:hover::before {
+  width: 50%;
+}
+
+.contact_map {
+  height: 100%;
+  width: 100%;
+}
+
+.contact_map iframe {
+  height: 100%;
+  width: 100%;
+}
+
+/* Blog css start */
+#blog {
+  padding-top: 60px;
+  /* background-color: rosybrown; */
+}
+
+.blog_head {
+  text-align: center;
+}
+
+.blog_head h2 {
+  font-family: var(--raleway);
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 64px;
+  color: #282938;
+}
+
+.blog_head p {
+  font-weight: 500;
+  font-size: 16px;
+  padding-top: 12px;
+  color: #282938;
+  opacity: 0.87;
+  margin-bottom: 20px;
+  font-family: var(--sans-serif);
+}
+
+.blog_content {
+  margin-top: 50px;
+}
+
+.blog_content p {
+  font-size: 16px;
+  line-height: 28px;
+  color: #282938;
+  opacity: 0.7;
+  margin-bottom: 20px;
+  font-family: var(--lato);
+}
+
+/* Latest Blog css start */
+#latest_blog {
+  margin-top: 70px;
+}
+
+.latest_blog_header h3 {
+  font-size: 40px;
+  font-weight: 500;
+  font-family: var(--raleway);
+}
+
+.latest_blog_slider {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  overflow: hidden;
+  margin: 60px 12px 0 12px;
+  padding-bottom: 30px;
+  background-color: #f1f1f1b7;
+  cursor: pointer;
+}
+
+.latest_blog_slider_img {
+  overflow: hidden;
+}
+
+.latest_blog_slider_img img {
+  height: 250px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.latest_blog_slider:hover img {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+.latest_blog_slider_details p {
+  font-size: 14px;
+  font-family: var(--lato);
+  opacity: .78;
+}
+
+.latest_blog_slider_content h4 {
+  margin-top: 30px;
+  font-size: 20px;
+  font-family: var(--roboto);
+}
+
+.latest_blog_btn a {
+  color: #29abe2;
+  font-size: 18px;
+  margin-top: 30px;
+  padding: 10px 30px;
+  border: 1px solid #29abe2;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.latest_blog_btn a:hover {
+  color: white;
+  background-color: #29abe2;
 }
